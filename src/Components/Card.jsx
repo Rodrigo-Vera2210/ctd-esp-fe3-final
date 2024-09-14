@@ -5,7 +5,7 @@ import { useDoctoresStates } from "./utils/global.context";
 
 const Card = ({ name, username, id, doctor }) => {
   const { state, dispatch } = useDoctoresStates()
-  const isFav = state.favs.find((fav) => fav.id === id)
+  const isFav = state.favs && state.favs.find((fav) => fav.id === id)
   console.log(name)
 
   const addFav = ()=>{
@@ -15,7 +15,7 @@ const Card = ({ name, username, id, doctor }) => {
 
   return (
     <div className="card">
-        <Link to={"/detail/" + id}>
+        <Link to={"/dentist/" + id}>
           <img src="./images/doctor.jpg" alt="" />
           <div className="card-container">
             <h4>{name}</h4>

@@ -177,9 +177,16 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+.dark nav, .dark footer {
+  background-color: #12121296;
+}
+
+.dark footer div{
+  background-color:transparent;
+}
 
 .dark{
-  background-color: #12121296;
+  background-color: darkgray;
   color: white;
 }
 .dark > a {

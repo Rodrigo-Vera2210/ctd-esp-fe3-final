@@ -6,10 +6,12 @@ import Home from "./Routes/Home"
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
 import Contact from "./Routes/Contact";
+import { useDoctoresStates } from "./Components/utils/global.context";
 
 function App() {
+  const { state } = useDoctoresStates()
   return (
-      <div className="App">
+      <div className={`App ${state.theme}`}>
           <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>}/>
